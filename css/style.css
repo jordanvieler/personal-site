@@ -1,16 +1,12 @@
-.navbar a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-  
-  /* Hide the menu link on large screens */
 .navbar .menu {
     display: none;
+}
+.navbar a{
     text-decoration: none;
 }
-/* When screen < 600px, hide all links but first, show menu link */
+
 @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {
+    .navbar a {/*:not(:first-child) {*/
         display: none;
     }
     .navbar a.menu {
