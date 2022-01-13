@@ -6,6 +6,7 @@
   /* Hide the menu link on large screens */
 .navbar .menu {
     display: none;
+    text-decoration: none;
 }
 /* When screen < 600px, hide all links but first, show menu link */
 @media screen and (max-width: 600px) {
