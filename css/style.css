@@ -1,8 +1,15 @@
+body{
+    font-family: monaco, monospace;
+    color: lime;
+    background-color: black;
+}
+
 .navbar .menu {
     display: none;
 }
 .navbar a{
     text-decoration: none;
+    color: lime
 }
 
 @media screen and (max-width: 600px) {
