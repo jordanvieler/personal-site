@@ -1,9 +1,9 @@
 function flipOpen() {
-    var x = document.getElementById("responsiveNavbar");
-    if (x.className === "navbar") {
-      x.className += " open";
+    var x = document.getElementById("nav");
+    if (x.className === "" ) {
+      x.className = "open";
     } else {
-      x.className = "navbar";
+      x.className = "";
     }
   }
 

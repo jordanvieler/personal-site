@@ -3,33 +3,27 @@ body{
     color: lime;
     background-color: black;
 }
-
-.navbar .menu {
-    display: none;
+a{
+    color: lime;
+    background-color: black;
+    text-decoration: none;      
+} 
+nav a.menu{
+    display:none
 }
-.navbar a{
-    text-decoration: none;
-    color: lime
+nav a.current{
+    color: cyan;
+    text-shadow: 0 0 0.5em cyan;
 }
 
 @media screen and (max-width: 600px) {
-    .navbar a {/*:not(:first-child) {*/
+    nav a{
         display: none;
     }
-    .navbar a.menu {
-      float: right;
+    nav a.menu{
       display: block;
     }
-    .navbar.open {
-        position: relative;
-    }
-    .navbar.open a.menu {
-          position: absolute;
-          right: 0;
-          top: 0;
-    }
-    .navbar.open a {
-        float: none;
+    nav.open a {
         display: block;
         text-align: left;
     }
