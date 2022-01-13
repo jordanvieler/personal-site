@@ -1,0 +1,32 @@
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+  
+  /* Hide the menu link on large screens */
+.navbar .menu {
+    display: none;
+}
+/* When screen < 600px, hide all links but first, show menu link */
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+    .navbar a.menu {
+      float: right;
+      display: block;
+    }
+    .navbar.open {
+        position: relative;
+    }
+    .navbar.open a.menu {
+          position: absolute;
+          right: 0;
+          top: 0;
+    }
+    .navbar.open a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
