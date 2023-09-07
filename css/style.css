@@ -30,6 +30,9 @@ nav a.current{
         display: block;
         text-align: left;
     }
+    iframe{
+	height: 500px;
+    }
 }
 
 footer {
