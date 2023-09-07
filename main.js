@@ -6,7 +6,3 @@ function flipOpen() {
       x.className = "";
     }
   }
-
-function test_alert(){
-    alert("Nice!")
-}

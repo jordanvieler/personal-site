@@ -3,10 +3,11 @@ body{
     color: lime;
     background-color: black;
 }
-a{
+nav a{
     color: lime;
     background-color: black;
     text-decoration: none;      
+    font-size: 18px
 } 
 nav a.menu{
     display:none
@@ -21,10 +22,17 @@ nav a.current{
         display: none;
     }
     nav a.menu{
-      display: block;
+	display: block;
+	font-size: 32px;
+
     }
     nav.open a {
         display: block;
         text-align: left;
     }
+}
+
+footer {
+    padding-top: 40px;
+    text-align: center;
 }
