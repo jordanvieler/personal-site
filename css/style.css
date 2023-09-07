@@ -1,7 +1,20 @@
 body{
-    font-family: monaco, monospace;
+    font-family: 'Fira Code', monospace ;
     color: lime;
     background-color: black;
+}
+
+a:link {
+    color: cyan
+}
+a:hover{
+    color: magenta
+}
+a:visited{
+    color: magenta
+}
+a:active{
+    color: cyan;
 }
 nav a{
     color: lime;
@@ -11,6 +24,18 @@ nav a{
 } 
 nav a.menu{
     display:none
+}
+nav a:link {
+    color: lime
+}
+nav a:hover{
+    color: lime
+}
+nav a:visited{
+    color: lime
+}
+nav a:active{
+    color: lime
 }
 nav a.current{
     color: cyan;
