@@ -64,3 +64,44 @@ footer {
     padding-top: 40px;
     text-align: center;
 }
+
+h1.tty0 {
+	width:2ch;
+	animation-name: type, blink;
+	animation-duration: 0.75s, 0.50s;
+	animation-delay: 1.5s, 0s;
+	animation-timing-function: steps(6), step-end;
+	animation-iteration-count: 1, 7; 
+	animation-direction: normal, alternate;
+	animation-fill-mode: forwards, none;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid transparent;
+	font-size: 2em;
+}
+
+
+@keyframes type {
+    to {
+	width:8ch
+    }
+}
+
+@keyframes blink {
+    50% { 
+	border-color: lime
+    }
+}
+
+.pop-in {
+    visibility: hidden;
+    animation-name: show;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s
+}
+
+@keyframes show {
+    to {
+	visibility: visible;
+    }
+}
