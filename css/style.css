@@ -101,13 +101,11 @@ h1.tty0 {
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: 3px solid transparent;
+	box-sizing: content-box;
 }
 
 
 @keyframes type {
-    from {
-	width: 2ch;
-    }
     to {
 	width: 12ch;
     }
