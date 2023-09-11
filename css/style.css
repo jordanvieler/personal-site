@@ -3,6 +3,7 @@ body{
     color: lime;
     background-color: black;
     margin: 0;
+    font-size: 100%;
 }
 
 .content{
@@ -37,11 +38,11 @@ nav a{
     color: lime;
     background-color: black;
     text-decoration: none;      
-    font-size: 18px;
+    font-size: 1.2em;
     background-color: transparent;
 } 
 nav a.menu{
-    display:none
+    display:none;
 }
 nav a:link {
     color: lime
@@ -61,12 +62,15 @@ nav a.current{
 }
 
 @media screen and (max-width: 600px) {
+    nav.open {
+	display: grid;
+    }
     nav a{
         display: none;
     }
     nav a.menu{
 	display: block;
-	font-size: 32px;
+	font-size: 2em;
 
     }
     nav.open a {
@@ -79,12 +83,13 @@ nav a.current{
 }
 
 footer {
-    padding-top: 40px;
+    padding-top: 3em;
     text-align: center;
 }
 
 h1.tty0 {
 	width: 2ch;
+	font-size: 2em;
 	display: flex;
 	animation-name: type, blink;
 	animation-duration: 1.5s, 0.50s;
@@ -96,7 +101,6 @@ h1.tty0 {
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: 3px solid transparent;
-	font-size: 2em;
 }
 
 
