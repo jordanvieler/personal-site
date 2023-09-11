@@ -86,10 +86,10 @@ footer {
 h1.tty0 {
 	width: 2ch;
 	animation-name: type, blink;
-	animation-duration: 0.75s, 0.50s;
+	animation-duration: 1.5s, 0.50s;
 	animation-delay: 1.5s, 0s;
-	animation-timing-function: steps(6), step-end;
-	animation-iteration-count: 1, 7; 
+	animation-timing-function: steps(10), step-end;
+	animation-iteration-count: 1, 8; 
 	animation-direction: normal, alternate;
 	animation-fill-mode: forwards, none;
 	white-space: nowrap;
@@ -104,7 +104,7 @@ h1.tty0 {
 	width: 2ch;
     }
     to {
-	width: 8ch;
+	width: 12ch;
     }
 }
 
@@ -118,7 +118,7 @@ h1.tty0 {
     visibility: hidden;
     animation-name: show;
     animation-fill-mode: forwards;
-    animation-delay: 3.5s
+    animation-delay: 4.5s
 }
 
 @keyframes show {
