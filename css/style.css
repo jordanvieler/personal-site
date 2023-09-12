@@ -91,17 +91,16 @@ h1.tty0 {
 	width: 2ch;
 	font-size: 2em;
 	display: flex;
-	animation-name: type, blink;
-	animation-duration: 1.5s, 0.50s;
-	animation-delay: 1.5s, 0s;
+	animation-name: type, remove-cursor;
+	animation-duration: 1.5s, 0s;
+	animation-delay: 1s, 3.25s;
 	animation-timing-function: steps(10), step-end;
-	animation-iteration-count: 1, 8; 
-	animation-direction: normal, alternate;
-	animation-fill-mode: forwards, none;
+	animation-iteration-count: 1, 1; 
+	animation-direction: normal;
+	animation-fill-mode: forwards;
 	white-space: nowrap;
 	overflow: hidden;
-	border-right: 3px solid transparent;
-	box-sizing: content-box;
+	border-right: 0.1em solid;
 }
 
 
@@ -111,17 +110,18 @@ h1.tty0 {
     }
 }
 
-@keyframes blink {
-    50% { 
-	border-color: lime
+@keyframes remove-cursor {
+    to {
+	border-color: transparent;
     }
 }
+
 
 .pop-in {
     visibility: hidden;
     animation-name: show;
     animation-fill-mode: forwards;
-    animation-delay: 4.5s
+    animation-delay: 3.3s
 }
 
 @keyframes show {
