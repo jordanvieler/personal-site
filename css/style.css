@@ -76,9 +76,7 @@ nav a.current{
     nav.open a {
         display: block;
         text-align: left;
-    }
-    iframe{
-	height: 500px;
+	position: relative;
     }
 }
 
@@ -87,45 +85,3 @@ footer {
     text-align: center;
 }
 
-h1.tty0 {
-	width: 2ch;
-	font-size: 2em;
-	display: flex;
-	animation-name: type, remove-cursor;
-	animation-duration: 1.5s, 0s;
-	animation-delay: 1s, 3.25s;
-	animation-timing-function: steps(10), step-end;
-	animation-iteration-count: 1, 1; 
-	animation-direction: normal;
-	animation-fill-mode: forwards;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 0.1em solid;
-}
-
-
-@keyframes type {
-    to {
-	width: 12ch;
-    }
-}
-
-@keyframes remove-cursor {
-    to {
-	border-color: transparent;
-    }
-}
-
-
-.pop-in {
-    visibility: hidden;
-    animation-name: show;
-    animation-fill-mode: forwards;
-    animation-delay: 3.3s
-}
-
-@keyframes show {
-    to {
-	visibility: visible;
-    }
-}
