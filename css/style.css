@@ -85,3 +85,40 @@ footer {
     text-align: center;
 }
 
+h1.tty0 {
+	width: 2ch;
+	display: flex;
+	animation-name: type, blink;
+	animation-duration: 1.5s, 0.50s;
+	animation-delay: 1.5s, 0s;
+	animation-timing-function: steps(10), step-end;
+	animation-iteration-count: 1, 8; 
+	animation-direction: normal, alternate;
+	animation-fill-mode: forwards, none;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid;
+	font-size: 2em;
+}
+
+
+@keyframes type {
+    to {
+	width: 12ch;
+    }
+}
+
+
+
+.pop-in {
+    visibility: hidden;
+    animation-name: show;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s
+}
+
+@keyframes show {
+    to {
+	visibility: visible;
+    }
+}
