@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+    $endfor$
+    $if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$" />
+    $endif$
+    $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+    $endif$
+    $if(description-meta)$
+    <meta name="description" content="$description-meta$" />
+    $endif$
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" />
+    $endfor$
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+    $if(math)$
+    $if(mathjax)$
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    $endif$
+    $math$
+    $endif$
+</head>
+<body>
+    <noscript>Please enable javascript to use this menu on mobile</noscript>
+    <nav id="nav">
+        <button id="menu" href="#" onclick="flipOpen()">☰</a>
+        <a href="index.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a class="current" href="contact.html">Contact</a>
+        <a href="https://github.com/jordanvieler" target="_blank">
+            <img src="assets/github.svg" alt="Github" width="16px" height="16px">
+        </a>
+        <a href="https://www.linkedin.com/in/jordanvieler" target="_blank">
+            <img src="assets/linkedin.svg" alt="Linkedin" width="16px" height="16px">
+        </a>
+    </nav>
+    <div class="post_container">
+	<header>
+	    $if(title)$
+	    <h1>$title$</h1>
+	    $endif$
+	    $if(subtitle)$
+	    <p>$subtitle$</p>
+	    $endif$
+	    $for(author)$
+	    <p>$author$</p>
+	    $endfor$
+	    $if(date)$
+	    <p>Published: $date$</p>
+	    $endif$
+	    $for(dates_updated)$
+	    <p>Updated: $dates_updated$</p>
+	    $endfor$
+    </header>
+    <div class="post_toc">
+	Table of Contents
+	$if(toc)$
+	$table-of-contents$
+	$endif$
+    </div>
+    <div class="post_frame">
+    <div class="post_content">
+	$body$
+    </div>
+    </div>
+    </div>
+    <footer>
+	&copy Jordan Vieler 2023
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>

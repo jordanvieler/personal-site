@@ -1,8 +1,11 @@
 function flipOpen() {
-    var x = document.getElementById("nav");
-    if (x.className === "" ) {
-      x.className = "open";
+    var nav = document.getElementById("nav");
+    var menu = document.getElementById("menu")
+    if (nav.className === "" ) {
+      nav.className = "open";
+      menu.innerText = "×"
     } else {
-      x.className = "";
+      nav.className = "";
+      menu.innerText = "☰"
     }
   }

@@ -16,10 +16,9 @@
 <body>
     <noscript>Please enable javascript to use this menu on mobile</noscript>
     <nav id="nav">
-        <a class="menu" href="#" onclick="flipOpen()">&#9776</a>
+        <button id="menu" href="#" onclick="flipOpen()">☰</button>
         <a href="index.html">Home</a>
         <a class="current" href="posts.html">Posts</a>
-        <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
         <a href="http://www.github.com/jordanvieler" target="_blank">
             <img src="assets/github.svg" alt="Github" width="16px" height="16px">
@@ -28,16 +27,41 @@
             <img src="assets/linkedin.svg" alt="Linkedin" width="16px" height="16px">
         </a>
     </nav>
-    <div class="content">
-    <section>
-	    <h1>Posts</h1>
-	    <p>Stay tuned...</p>
-    </section>
-<footer>
-    &copy Jordan Vieler 2023
-</footer>
-</div>
-<script src="main.js"></script>
+    <div class="page_content">
+	<h1>Posts</h1>
+    </div>
+	<div class="post_frame" id="posts_page">
+	<div class="post_content">
+	    <table id="post_dir">
+		<caption>
+		    Posts in reverse chronological order.
+		</caption>
+		<thead>
+		    <tr>
+			<th scope="col">Title</th>
+			<th scope="col">Published</th>
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+			<th><a href="posts/new_post.html">Chakra's Conquest</a></th>
+			<td>YYYY-MM-DD</td>
+		    </tr>
+		    <tr>
+			<th>Chimera stole my shrimp!</th>
+			<td>YYYY-MM-DD</td>
+		    </tr>
+		    <tr>
+			<th>How to Train Your Cat to Swim</th>
+			<td>YYYY-MM-DD</td>
+		    </tr>
+		</tbody>
+	    </table>
+	</div>
+	</div>
+    <footer>
+	&copy Jordan Vieler 2023
+    </footer>
+    <script src="main.js"></script>
 </body>
-
 </html>

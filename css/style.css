@@ -4,11 +4,13 @@ body{
     background-color: black;
     margin: 0;
     font-size: 100%;
+    max-width: 100%
 }
 
-.content{
+.page_content{
     padding: 1em;
 }
+
 
 a:link {
     color: cyan;
@@ -25,25 +27,30 @@ a:active{
 nav {
     position: sticky;
     top: 0;
-    width: 100%;
+    z-index: 1;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: transparent;
+    background-color: rgba(0 0 0 / 50%);
     border-bottom: solid lime 1px;
     padding: 0.2em;
 }
 
-
 nav a{
     color: lime;
-    background-color: black;
     text-decoration: none;      
     font-size: 1.2em;
     background-color: transparent;
 } 
-nav a.menu{
-    display:none;
+
+#menu{
+    display: none;
+    border: unset;
+    color: lime;
+    padding: unset;
+    background-color: transparent;
+    text-align: left
 }
+
 nav a:link {
     color: lime
 }
@@ -61,6 +68,96 @@ nav a.current{
     text-shadow: 0 0 0.5em cyan;
 }
 
+
+footer {
+    padding-top: 3em;
+    text-align: center;
+}
+
+.post_container {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 3.75fr;
+    gap: 0.5em;
+
+}
+
+.post_container header {
+    padding: 0.25em;
+    border: 1px solid lime;
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+.post_toc {
+    position: sticky;
+    top: 2.5em;
+    align-self: start;
+    text-align: left;
+    text-wrap: wrap;
+    border: 1px solid lime;
+    grid-column: 1;
+    grid-row: 2;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.post_toc ul{
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+    margin: unset;
+    padding: 0.5em;
+    list-style-position: inside;
+}
+
+.post_toc li{
+    width: 100%;
+}
+
+.post_frame {
+    padding: 0.2em;
+    background: black;
+    border: 1px solid lime;
+    box-shadow: 0 0 1em lime;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.post_content {
+    padding: 0.5em;
+    background: #f5edd6;
+    color: black;
+}
+
+#posts_page{
+    margin: 1em;
+}
+
+#post_dir {
+    width: 100%
+}
+
+
+#post_dir caption{
+    caption-side: bottom;
+}
+
+#post_dir thead tr {
+    padding-bottom: 0.5em;
+}
+
+#post_dir thead tr > * {
+    padding: 0.25em;
+    border: 0.1em solid black;
+}
+
+#post_dir tbody tr > *{
+    border: 0.1em solid black;
+    text-align: left;
+    padding: 0.25em
+}
+
 @media screen and (max-width: 600px) {
     nav.open {
 	display: grid;
@@ -68,7 +165,7 @@ nav a.current{
     nav a{
         display: none;
     }
-    nav a.menu{
+    nav button#menu{
 	display: block;
 	font-size: 2em;
 
@@ -78,27 +175,78 @@ nav a.current{
         text-align: left;
 	position: relative;
     }
-}
+    .post_container {
+	grid-template-columns: 1fr;
+	margin: unset;
+	gap: unset;
+    }
+    .post_content {
+	background: #f5edd6;
+	color: black;
+    }
+    .post_container header {
+        padding: 0.25em;
+	margin: 0.5em; 
+        grid-row: 1;
+	grid-column: unset;
+    }
+    #posts_page{
+	margin: unset;
+    }
+    
+    .post_toc {
+        padding: 0.25em;
+	margin: 0.5em;
+        position: unset;
+        top: unset;
+        align-self: auto;
+        text-align: left;
+        grid-row: 2;
+	grid-column: unset;
+        height: unset;
+        overflow: unset;
+    }
+    
+    .post_frame {
+	padding: unset;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+	border: unset;
+        border-top: 1px solid lime;
+        border-bottom: 1px solid lime;
+        background: black;
+        box-shadow: 0 0 1em lime;
+        grid-row: 3;
+	grid-column: unset;
+    }
 
-footer {
-    padding-top: 3em;
-    text-align: center;
+.post_content {
+    padding: 0.5em;
+    background: #f5edd6;
+    color: black;
+}
+    #post_dir thead tr th:nth-child(2){
+	display: none;
+    }
+    #post_dir tbody tr td{
+	display: none;
+    }
 }
 
 h1.tty0 {
-	width: 2ch;
-	display: flex;
-	animation-name: type, blink;
-	animation-duration: 1.5s, 0.50s;
-	animation-delay: 1.5s, 0s;
-	animation-timing-function: steps(10), step-end;
-	animation-iteration-count: 1, 8; 
-	animation-direction: normal, alternate;
-	animation-fill-mode: forwards, none;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid;
-	font-size: 2em;
+    width: 2ch;
+    display: flex;
+    animation-name: type, blink;
+    animation-duration: 1.5s, 0.50s;
+    animation-delay: 1.5s, 0s;
+    animation-timing-function: steps(10), step-end;
+    animation-iteration-count: 1, 8; 
+    animation-direction: normal, alternate;
+    animation-fill-mode: forwards, none;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
 }
 
 
@@ -107,8 +255,6 @@ h1.tty0 {
 	width: 12ch;
     }
 }
-
-
 
 .pop-in {
     visibility: hidden;
